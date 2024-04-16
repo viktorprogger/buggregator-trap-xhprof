@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  bg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${WEB_PORT:-8000}:8000
+    volumes:
+      - ./data:/app/data
